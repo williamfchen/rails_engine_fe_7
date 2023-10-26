@@ -1,0 +1,15 @@
+<h1><%= @merchant.name %></h1>
+
+<h2>Items</h2>
+<ul>
+  <% @items.each do |item| %>
+    <li>
+      <strong>Name:</strong> <%= item.name %><br>
+      <strong>Description:</strong> <%= item.description %><br>
+      <strong>Price:</strong> <%= number_to_currency(item.unit_price) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Merchants', merchants_path %>
+
